@@ -7,6 +7,11 @@ export const api = Axios.create({
   timeout: 8000
 })
 
+export const artAPI = Axios.create({
+  baseURL: 'https://sandbox.codeworksacademy.com/',
+  timeout: 5000
+})
+
 api.interceptors.request.use(config => config, handleAxiosError)
 api.interceptors.response.use(response => response, handleAxiosError)
 
